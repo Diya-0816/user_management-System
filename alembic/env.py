@@ -7,9 +7,10 @@ from sqlalchemy import pool
 
 from alembic import context
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from app.db.base import Base
-from app.models import user  # import your models here
+from app.models import user  
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
